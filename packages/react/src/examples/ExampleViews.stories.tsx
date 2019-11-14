@@ -1,10 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Section, ImageWithCard } from '../..';
-import imageFile from '../../assets/img/placeholder_1920x1080.jpg';
-import imageFile2 from '../../assets/img/placeholder_2_1920x1080.jpg';
-import imageFile3 from '../../assets/img/placeholder_1400x1164.jpg';
+import imageFile from '../assets/img/placeholder_1920x1080.jpg';
+import imageFile2 from '../assets/img/placeholder_2_1920x1080.jpg';
+import imageFile3 from '../assets/img/placeholder_1400x1164.jpg';
+import Section from '../components/section/Section';
+import ImageWithCard from '../components/imagewithcard/ImageWithCard';
+import Footer from '../components/footer/Footer';
 
 const ExampleView = () => (
   <>
@@ -56,6 +58,7 @@ const ExampleView = () => (
         Excepteur sint obcaecat cupiditat non proident.
       </p>
     </ImageWithCard>
+    <Footer />
   </>
 );
 

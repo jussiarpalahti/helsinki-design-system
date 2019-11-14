@@ -1,0 +1,11 @@
+@import '~hds-core/lib/helsinki.css';
+
+.footer {
+  margin-top: 13.75em;
+}
+
+@media all and (max-width: 768px) {
+  .footer {
+    margin-top: 3em;
+  }
+}

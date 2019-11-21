@@ -27,7 +27,10 @@ jobs:
         working-directory: ./site
 
       - name: build docz site
-        run: ./build.sh
+        run: |
+          yarn --version
+          ./fail.sh
+          ./build.sh
         working-directory: ./site
         env:
           DOCZ_BASE: /helsinki-design-system/

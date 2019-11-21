@@ -29,7 +29,6 @@ jobs:
       - name: build docz site
         run: |
           yarn --version
-          ./fail.sh
           ./build.sh
         working-directory: ./site
         env:

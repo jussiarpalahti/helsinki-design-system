@@ -27,13 +27,13 @@ jobs:
         working-directory: ./site
 
       - name: build docz site
-        run: bash yarn run build
+        run: bash --noprofile --norc -eo pipefail yarn run build
         working-directory: ./site
         env:
           DOCZ_BASE: /helsinki-design-system/
 
       - name: build storybook site
-        run: bash yarn build-storybook
+        run: bash --noprofile --norc -eo pipefail yarn run build
         working-directory: ./packages/react
 
       - name: move storybook under docz

@@ -15,6 +15,18 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "10.x"
+      
+      - name: Where is yarn
+        run: |
+          echo $(yarn global bin)
+          env
+        working-directory: ./site
+      
+      - name: Where is yarn in bash
+        run: |
+          bash echo $(yarn global bin)
+          bash env
+        working-directory: ./site
 
       - name: install base packages
         run: yarn

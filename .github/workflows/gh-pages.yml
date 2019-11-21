@@ -27,13 +27,13 @@ jobs:
         working-directory: ./site
 
       - name: build docz site
-        run: build.sh
+        run: ./build.sh
         working-directory: ./site
         env:
           DOCZ_BASE: /helsinki-design-system/
 
       - name: build storybook site
-        run: build.sh
+        run: ./build.sh
         working-directory: ./packages/react
 
       - name: move storybook under docz

@@ -14,7 +14,7 @@
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
-    "hds-core": "file:../packages/core/",
+    "hds-core": "file:../packages/core/src/",
     "hds-react": "file:../packages/react/"
   }
 }

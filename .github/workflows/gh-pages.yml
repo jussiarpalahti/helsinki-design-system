@@ -28,14 +28,14 @@ jobs:
 
       - name: build docz site
         run: |
-          yarn --version
-          ./build.sh
+          yarn run build
+          ./check_build.sh
         working-directory: ./site
         env:
           DOCZ_BASE: /helsinki-design-system/
 
       - name: build storybook site
-        run: ./build.sh
+        run: yarn run build
         working-directory: ./packages/react
 
       - name: move storybook under docz

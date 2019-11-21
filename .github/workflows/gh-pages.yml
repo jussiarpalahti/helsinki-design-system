@@ -15,18 +15,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "10.x"
-      
-      - name: Where is yarn
-        run: |
-          echo $(yarn global bin)
-          env
-        working-directory: ./site
-      
-      - name: Where is yarn in bash
-        run: |
-          bash echo $(yarn global bin)
-          bash env
-        working-directory: ./site
 
       - name: install base packages
         run: yarn
@@ -39,13 +27,15 @@ jobs:
         working-directory: ./site
 
       - name: build docz site
-        run: bash --noprofile --norc -eo pipefail yarn run build
+        run: yarn run build
         working-directory: ./site
+        shell: bash --noprofile --norc -eo pipefail {0}
         env:
           DOCZ_BASE: /helsinki-design-system/
 
       - name: build storybook site
-        run: bash --noprofile --norc -eo pipefail yarn run build
+        run: yarn run build
+        shell: bash --noprofile --norc -eo pipefail {0}
         working-directory: ./packages/react
 
       - name: move storybook under docz
